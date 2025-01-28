@@ -1,0 +1,213 @@
+root {
+  --white-russian: hsl(44, 27%, 92%); /* #f0ede 5*/
+  --mandarin: hsl(27, 98%, 58%); /* #fd892b */
+  --violet: hsl(312, 57%, 23%); /* #5c194f */
+  --noir: hsl(240, 100%, 6%); /* #00001f */
+  --mauve: hsl(298, 27%, 42%); /* #864e88 */
+  --lilac: hsl(296, 80%, 92%); /* #f9dafb */
+  --peach: hsl(20, 80%, 71%); /* #f0a17a */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: hsl(44, 27%, 92%);
+  display: flex;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+}
+
+.heading-text {
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-around;
+  padding: 75px 50px;
+  position: absolute;
+  width: 100%;
+}
+
+.heading-primary-main {
+  font-family: "Baloo Paaji 2";
+  font-size: 120px;
+  line-height: 0.8;
+  text-transform: uppercase;
+  display: block;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.heading-primary-sub {
+  font-family: "Montserrat";
+  font-size: 24px;
+  display: block;
+
+  animation: moveInRight 1s ease-out;
+}
+
+/* HEADER ANIMATION */
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opactity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+main {
+  margin-top: 350px;
+  padding: 0px 40px 50px 40px;
+}
+
+.tour-stops {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 13px;
+}
+
+.box {
+  width: 302px;
+  height: 395px;
+  background-repeat: no-repeat;
+
+  font-family: "Baloo Paaji 2";
+  font-size: 58px;
+  font-weight: 600;
+  color: hsl(44, 27%, 92%);
+  text-shadow: -1px 2px 9px hsl(240, 100%, 6%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 2;
+}
+
+button {
+  font-family: "Baloo Paaji 2";
+  font-size: 58px;
+  font-weight: 600;
+  color: hsl(44, 27%, 92%);
+  text-shadow: -1px 2px 6px hsl(243, 10%, 35%);
+  background-color: transparent;
+  border: none;
+}
+
+.os-font {
+  line-height: 0.85;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(3px);
+  z-index: 5;
+}
+
+.denver {
+  background-image: url(/tour-stops/denver-br.jpg);
+}
+
+.asheville {
+  background-image: url(/tour-stops/ashville-br.jpg);
+}
+
+.atlanta {
+  background-image: url(/tour-stops/atlanta-br.jpg);
+}
+
+.nashville {
+  background-image: url(/tour-stops/nashville-br.jpg);
+}
+
+/* INFO WINDOW */
+
+.info {
+  position: absolute;
+
+  bottom: 50%;
+  transform: translate(2%, 75%);
+  width: 85%;
+
+  background-color: hsl(44, 28%, 92%);
+  padding: 3rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+
+  font-family: Montserrat;
+  font-size: 3rem;
+}
+
+.close-event {
+  position: absolute;
+  top: -2rem;
+  right: 1rem;
+  font-size: 4rem;
+  color: hsl(243, 10%, 35%);
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h3 {
+  font-family: "Baloo Paaji 2";
+  line-height: 3rem;
+}
+
+h4 {
+  font-family: "Montserrat";
+  font-weight: 300;
+  padding: 1rem;
+}
