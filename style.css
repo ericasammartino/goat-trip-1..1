@@ -1,17 +1,3 @@
-root {
-  --white-russian: hsl(44, 27%, 92%); /* #f0ede5*/
-  --mandarin: hsl(27, 98%, 58%); /* #fd892b */
-  --violet: hsl(312, 57%, 23%); /* #5c194f */
-  --noir: hsl(240, 100%, 6%); /* #00001f */
-  --mauve: hsl(298, 27%, 42%); /* #864e88 */
-  --lilac: hsl(296, 80%, 92%); /* #f9dafb */
-  --peach: hsl(20, 80%, 71%); /* #f0a17a */
-  --sunset: hsl(18, 95%, 75%);
-  --jet: hsl(266, 6%, 24%);
-  --rose-ebony: hsl(350, 15%, 48%);
-  --dark-rose: hsl(349, 15%, 36%);
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -137,7 +123,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-shrink: 2;
+  flex-shrink: 1;
 }
 
 .os-font {
@@ -148,7 +134,7 @@ main {
 .winter-tour,
 .spring-tour {
   font-size: 6em;
-  text-shadow: -1px 2px 9px hsl(349, 15%, 36%);
+  color: hsl(266, 6%, 24%);
 }
 
 /* BUTTONS */
@@ -166,7 +152,7 @@ main {
   box-shadow: 1px 1px 20px hsl(18, 95%, 75%);
 
   border: 3px solid hsl(30, 80%, 96%);
-  border-radius: 12px;
+  border-radius: 8px;
 
   cursor: pointer;
   transition: all 250ms ease-in-out;
@@ -190,75 +176,75 @@ main {
 }
 
 .denver {
-  background-image: url(/tour-stops/denver-br.jpg);
+  background-image: url(/denver-br.jpg);
 }
 
 .asheville {
-  background-image: url(/tour-stops/ashville-br.jpg);
+  background-image: url(/ashville-br.jpg);
 }
 
 .atlanta {
-  background-image: url(/tour-stops/atlanta-br.jpg);
+  background-image: url(/atlanta-br.jpg);
 }
 
 .nashville {
-  background-image: url(/tour-stops/nashville-br.jpg);
+  background-image: url(/nashville-br.jpg);
 }
 
 .st-augustine {
-  background-image: url(/tour-stops/st-augustine-br.jpg);
+  background-image: url(/st-augustine-br.jpg);
 }
 
 .tampa {
-  background-image: url(/tour-stops/tampa-br.jpg);
+  background-image: url(/tampa-br.jpg);
 }
 
 .savannah {
-  background-image: url(/tour-stops/savannah-br.jpg);
+  background-image: url(/savannah-br.jpg);
 }
 
 .charlottesville {
-  background-image: url(/tour-stops/charlottesville-br.jpg);
+  background-image: url(/charlottesville-br.jpg);
 }
 
 .cary {
-  background-image: url(/tour-stops/cary-br.png);
+  background-image: url(/cary-br.png);
 }
 
 .grand-rapids {
-  background-image: url(/tour-stops/grand-rapids-br.png);
+  background-image: url(/grand-rapids-br.png);
 }
 
 .rosemont {
-  background-image: url(/tour-stops/rosemont-br.jpg);
+  background-image: url(/rosemont-br.jpg);
 }
 
 .kansas-city {
-  background-image: url(/tour-stops/kansas-city-br.jpg);
+  background-image: url(/kansas-city-br.jpg);
 }
 
 .st-louis {
-  background-image: url(/tour-stops/st-louis-br.jpg);
+  background-image: url(/st-louis-br.jpg);
 }
 
 .lexington {
-  background-image: url(/tour-stops/lexington-br.png);
+  background-image: url(/lexington-br.png);
 }
 
 .melbourne {
-  background-image: url(/tour-stops/melbourne-br.jpg);
+  background-image: url(/melbourne-br.jpg);
 }
 
 .sydney {
-  background-image: url(/tour-stops/sydney-br.jpg);
+  background-image: url(/sydney-br.jpg);
 }
 
 .brisbane-city {
-  background-image: url(/tour-stops/brisbane-city-br.jpg);
+  background-image: url(/brisbane-city-br.jpg);
 }
 
 .auckland {
-  background-image: url(/tour-stops/auckland-br.jpg);
+  background-image: url(/auckland-br.jpg);
 }
 
 /* CITY ADJUSTMENTS */
@@ -269,71 +255,73 @@ main {
 
 .down-under {
   font-size: 0.5em;
-  text-shadow: 2px 1px 7px hsl(349, 15%, 36%);
+  text-shadow: 2px 1px 7px hsl(266, 6%, 24%);
 }
 
 /* TOUR STOP - INFO PAGE */
 
 /* BAND PICS */
-
+.home {
+  background-image: url(/home.png);
+}
 .grateful-dub {
-  background-image: url(/tour-stops/Asheville/grateful-dub.png);
+  background-image: url(/grateful-dub.png);
 }
 
 .saylor-brothers {
-  background-image: url(/tour-stops/Asheville/saylor-brothers.png);
+  background-image: url(/saylor-brothers.png);
 }
 
 .happy-landing {
-  background-image: url(/tour-stops/Asheville/happy-landing.png);
+  background-image: url(/happy-landing.png);
 }
 
 .airshow {
-  background-image: url(/tour-stops/Asheville/airshow.png);
+  background-image: url(/airshow.png);
 }
 
 .arkansauce {
-  background-image: url(/tour-stops/Asheville/arkansauce.png);
+  background-image: url(/arkansauce.png);
 }
 
 .fireside-collective {
-  background-image: url(/tour-stops/Asheville/fireside-collective.png);
+  background-image: url(/fireside-collective.png);
 }
 
 .fuzzy-rainbow-fest {
-  background-image: url(/tour-stops/Asheville/fuzzy-rainbow-fest.png);
+  background-image: url(/fuzzy-rainbow-fest.png);
 }
 
 .john-mailander {
-  background-image: url(/tour-stops/Asheville/john-mailander.png);
+  background-image: url(/john-mailander.png);
 }
 
 .johnny-mullenax {
-  background-image: url(/tour-stops/Asheville/johnny-mullenax.png);
+  background-image: url(/johnny-mullenax.png);
 }
 
 .kyle-tuttle {
-  background-image: url(/tour-stops/Asheville/kyle-tuttle.png);
+  background-image: url(/kyle-tuttle.png);
 }
 
 .mountain-grass-unit {
-  background-image: url(/tour-stops/Asheville/mountain-grass-unit.png);
+  background-image: url(/mountain-grass-unit.png);
 }
 
 .sicard-hollow {
-  background-image: url(/tour-stops/Asheville/sicard-hollow.png);
+  background-image: url(/sicard-hollow.png);
 }
 
 .suns-of-stars {
-  background-image: url(/tour-stops/Asheville/suns-of-stars.png);
+  background-image: url(/suns-of-stars.png);
 }
 
 .suns-of-stars-2 {
-  background-image: url(/tour-stops/Asheville/suns-of-stars-2.png);
+  background-image: url(/suns-of-stars-2.png);
 }
 
 .town-mountain {
-  background-image: url(/tour-stops/Asheville/town-mountain.png);
+  background-image: url(/town-mountain.png);
 }
 
 .info-page {
@@ -344,13 +332,31 @@ main {
   font-family: "Montserrat";
 }
 
+.menu {
+  font-size: 5vw;
+}
+
 .city {
-  margin: 50px 0px 0px 0px;
+  margin: 25px 0px 0px 0px;
   font-family: "Baloo Paaji 2";
   font-size: 15vw;
   font-weight: 600;
-  color: hsl(30, 80%, 96%);
-  text-shadow: 2px 2px 10px hsl(349, 15%, 36%);
+  color: hsl(266, 6%, 24%);
+  /* text-shadow: 0px 0px 4px hsl(246, 54%, 29%); */
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+.state {
+  margin: -270px 0px 25px 0px;
+  font-family: "Baloo Paaji 2";
+  text-transform: lowercase;
+  font-size: 7vw;
+  font-weight: 500;
+  color: hsl(266, 6%, 24%);
+  /* text-shadow: 0px 0px 4px hsl(246, 54%, 29%); */
 
   animation-name: moveInLeft;
   animation-duration: 1s;
@@ -371,7 +377,7 @@ main {
   font-size: 1.75em;
   font-weight: 400;
   text-decoration: none;
-  color: hsl(350, 15%, 48%);
+  color: hsl(198, 94%, 28%);
 }
 
 .container {
@@ -392,7 +398,7 @@ main {
   padding: 25px 0px 100px 0px;
   font-family: "Montserrat";
   font-size: 1em;
-  color: hsl(20, 80%, 71%);
+  color: hsl(198, 94%, 28%);
   margin: 0px 0px 0px 0px;
 }
 
@@ -421,7 +427,7 @@ main {
 .band {
   font-size: 2.75em;
   text-decoration: none;
-  color: hsl(350, 15%, 48%);
+  color: hsl(198, 94%, 28%);
 }
 
 .band-extra {
@@ -434,12 +440,12 @@ main {
 }
 
 .os-os-band {
-  font-size: 2.25vw;
+  font-size: 1.35vw;
 }
 
 a {
   text-decoration: none;
-  color: hsl(350, 15%, 48%);
+  color: hsl(198, 94%, 28%);
 }
 
 .time-venue {
@@ -470,7 +476,8 @@ a {
   }
 
   .heading-primary-main {
-    font-size: 90px;
+    font-size: 35vw;
+    margin: -55px 0px 0px 0px;
   }
 
   .heading-primary-sub {
@@ -480,43 +487,63 @@ a {
   .heading-primary-media {
     font-family: "Montserrat";
     color: hsl(266, 6%, 24%);
-    font-size: 24px;
+    font-size: 20px;
+    line-height: 1em;
     display: block;
     padding: 10px;
     animation: moveInRight 1s ease-out;
   }
 
   .tour-stops {
-    margin: -100px 0px 0px 0px;
+    gap: 20px;
+    margin: 125px 0px 0px 0px;
   }
 
   .winter-tour,
   .spring-tour,
   .summer-tour,
   .fall-tour {
-    height: 100px;
-    margin: 50px 0px 0px 0px;
+    height: 150px;
+    margin: -45px 0px -45px 0px;
+    font-size: 15vw;
   }
 
   .hidden {
     display: none;
   }
+  .box {
+    border-radius: 8px;
+  }
 
   /* TOUR STOP - INFO PAGE*/
 
+  .city {
+    font-size: 23vw;
+    margin: -10px 0px 0px 0px;
+  }
   .show-info {
     font-size: 3.25vw;
     font-weight: 300;
   }
 
+  .dates,
+  .times {
+    font-size: 4vw;
+  }
+
   .event-date {
-    font-size: 13vw;
-    line-height: 69px;
-    padding: 33px 0px 33px 0px;
+    font-size: 8vw;
+    letter-spacing: 2px;
+
+    padding: 0px 0px 15px 0px;
   }
 
   .event {
     gap: 150px;
+  }
+
+  .individual-event {
+    border-radius: 8px;
   }
 
   .band {
@@ -535,5 +562,51 @@ a {
 @media screen and (max-width: 768px) {
   .os-os-band {
     font-size: 4.25vw;
+  }
+}
+
+@media screen and (min-width: 714px) and (max-width: 1024px) {
+  .tour-stops {
+    margin: 112px -40px 0px -40px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .state {
+    margin: -150px 0px 25px 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1399px) {
+  .state {
+    margin: -120px 0px 25px 0px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .state {
+    margin: -99px 0px 25px 0px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .state {
+    margin: -72px 0px 25px 0px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .state {
+    margin: -50px 0px 25px 0px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .state {
+    margin: -50px 0px 25px 0px;
+  }
+
+  .tour-stops {
+    margin: 0px 0px 0px 0px;
   }
 }
