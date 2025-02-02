@@ -163,6 +163,11 @@ main {
   transform: scale(1.1);
 }
 
+.os-button {
+  font-size: 50px;
+  line-height: 0.9;
+}
+
 .info {
   box-shadow: 1px 1px 10px hsl(18, 95%, 75%);
 }
