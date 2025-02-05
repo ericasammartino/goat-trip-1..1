@@ -1,27 +1,18 @@
 "use strict";
 
-const showEvent = document.querySelector(".denver");
-const overlay = document.querySelector(".overlay");
-const info = document.querySelector(".info");
-const closeEvent = document.querySelector(".close-event");
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
 
-const openEvent = function () {
-  info.classList.remove("hidden");
-  overlay.classList.remove("hidden");
-};
-
-const close = function () {
-  info.classList.add("hidden");
-  overlay.classList.add("hidden");
-};
-
-showEvent.addEventListener("click", openEvent);
-closeEvent.addEventListener("click", close);
-
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") {
-    if (!info.classList.contains("hidden")) {
-      close();
+window.onclick = function (event) {
+  if (!event.target.matches(".button-dropdown")) {
+    const dropdowns = document.getElementsByClassName("dropdown-content");
+    for (let i; i < dropdowns.length; i++) {
+      const openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains("show")) {
+        openDropdown.classList.remove("show");
+        console.log("click");
+      }
     }
   }
-});
+};

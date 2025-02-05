@@ -6,36 +6,94 @@
 
 body {
   background: hsl(30, 80%, 96%);
-  display: flex;
 }
 
-/* HEADER */
+/* NAV */
 
-.menu {
-  font-size: 2vw;
-  padding: 25px 0px 0px 0px;
+.nav a {
+  position: absolute;
+  left: 85%;
+  padding: 3vw;
+  font-family: "Baloo Paaji 2";
+  font-size: 2em;
+  color: hsl(240, 5%, 4%);
 }
 
-header {
-  display: flex;
+.dropdown {
+  position: absolute;
+  padding: 3em;
+  left: 85%;
+  backdrop-filter: blur(20px);
+  z-index: 9999;
 }
+
+.button-dropdown {
+  position: fixed;
+  background-color: transparent;
+
+  font-family: "Baloo Paaji 2";
+  font-size: 4vw;
+  color: hsl(266, 6%, 24%);
+
+  border: none;
+  cursor: pointer;
+}
+
+.button-dropdown:hover,
+.button-dropdown:focus {
+  color: hsl(18, 95%, 75%);
+  border: 2px solid hsl(18, 95%, 75%);
+  box-shadow: 1px 1px 10px hsl(18, 95%, 75%);
+  border-radius: 12px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  left: 80%;
+  background-color: hsl(30, 80%, 96%);
+  width: 15vw;
+  box-shadow: 0px 1px 10px hsl(18, 95%, 75%);
+  border-radius: 12px;
+
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: block;
+
+  font-family: "Montserrat";
+  font-size: 1.1vw;
+  color: hsl(266, 6%, 24%);
+
+  padding: 0.5em;
+  text-align: center;
+  text-decoration: none;
+  z-index: 1;
+}
+
+.dropdown-content a:hover {
+  color: hsl(240, 5%, 4%);
+  text-transform: uppercase;
+}
+
+.show {
+  display: block;
+}
+
+/* HEADING */
 
 .heading-text {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 75px 50px;
-  margin: 25px 0px 0px 0px;
-  position: absolute;
-  width: 100%;
+  padding: 3em;
 }
 
 .heading-primary-main {
   font-family: "Baloo Paaji 2";
-  font-size: 180px;
-  line-height: 0.8;
+  font-size: 12em;
   text-transform: uppercase;
-  display: block;
   color: hsl(266, 6%, 24%);
 
   animation-name: moveInLeft;
@@ -45,7 +103,7 @@ header {
 
 .heading-primary-sub {
   font-family: "Montserrat";
-  font-size: 24px;
+  font-size: 2em;
   display: block;
   color: hsl(266, 6%, 24%);
 
@@ -90,16 +148,39 @@ header {
   }
 }
 
-main {
-  margin-top: 350px;
-  padding: 0px 40px 50px 40px;
-}
-
 .tour-stops {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 13px;
+  gap: 1em;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 302px;
+  height: 395px;
+
+  font-family: "Baloo Paaji 2";
+
+  line-height: 0.85;
+  text-align: center;
+}
+
+.winter-tour,
+.spring-tour {
+  font-size: 4em;
+  color: hsl(267, 6%, 32%);
+  font-weight: 100;
+}
+
+.down-under {
+  font-size: 0.4em;
+  font-weight: 100;
+  color: hsl(267, 6%, 40%);
 }
 
 .cities {
@@ -108,45 +189,15 @@ main {
   color: hsl(30, 80%, 96%);
 }
 
-.box {
-  width: 302px;
-  height: 395px;
-  background-repeat: no-repeat;
-
-  font-family: "Baloo Paaji 2";
-  font-size: 58px;
-  font-weight: 600;
-  color: hsl(30, 80%, 96%);
-  text-shadow: -1px 2px 9px hsl(266, 6%, 24%);
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 1;
-}
-
-.os-font {
-  line-height: 0.85;
-  text-align: center;
-}
-
-.winter-tour,
-.spring-tour {
-  font-size: 6em;
-  color: hsl(266, 6%, 24%);
-}
-
 /* BUTTONS */
 
 .button {
   background-color: transparent;
   backdrop-filter: blur(5px);
-  padding: 0px 10px;
+  padding: 5px;
 
   font-family: "Baloo Paaji 2";
-  font-size: 58px;
-  font-weight: 600;
+  font-size: 3em;
   color: hsl(30, 80%, 96%);
   text-shadow: -1px 2px 9px hsl(266, 6%, 24%);
   box-shadow: 1px 1px 20px hsl(18, 95%, 75%);
@@ -164,21 +215,24 @@ main {
 }
 
 .os-button {
-  font-size: 50px;
-  line-height: 0.9;
+  font-size: 3em;
+  line-height: 0.85;
 }
 
 .info {
   box-shadow: 1px 1px 10px hsl(18, 95%, 75%);
 }
 
-/* CITY BACKGROUND IMAGES */
+.footer {
+  position: absolute;
+  padding: 50px 0px;
+  left: 45%;
 
-.winter-tour,
-.spring-tour,
-.summer-tour,
-.fall-tour {
+  font-family: "Montserrat";
+  font-size: 3em;
 }
+
+/* CITY BACKGROUND IMAGES */
 
 .denver {
   background-image: url(/denver-br.jpg);
@@ -252,23 +306,41 @@ main {
   background-image: url(/auckland-br.jpg);
 }
 
-/* CITY ADJUSTMENTS */
-
-.charlottesville {
-  font-size: 40px;
+.phoenix {
+  background-image: url(/phoenix-br.jpg);
 }
 
-.down-under {
-  font-size: 0.5em;
-  text-shadow: 2px 1px 7px hsl(266, 6%, 24%);
+.chula-vista {
+  background-image: url(/chula-vista-br.png);
+}
+
+.los-angeles {
+  background-image: url(/los-angeles-br.jpg);
+}
+
+.wheatland {
+  background-image: url(/wheatland.png);
+}
+
+.nampa {
+  background-image: url(/nampa-br.png);
+}
+
+.spokane {
+  background-image: url(/spokane-br.jpg);
+}
+
+.ridgefield {
+  background-image: url(/ridgefield-br.jpg);
+}
+
+.george {
+  background-image: url(/george.png);
 }
 
 /* TOUR STOP - INFO PAGE */
 
 /* BAND PICS */
-.home {
-  background-image: url(/home.png);
-}
 .grateful-dub {
   background-image: url(/grateful-dub.png);
 }
@@ -329,6 +401,122 @@ main {
   background-image: url(/town-mountain.png);
 }
 
+.phaux-fish {
+  background-image: url(/phaux-fish.png);
+}
+
+.josh-blake {
+  background-image: url(/josh-blake.png);
+}
+
+.wall-street {
+  background-image: url(/wall-street.png);
+}
+
+.charlotte-bluegrass {
+  background-image: url(/charlotte-bluegrass.png);
+}
+
+.rossdafareye {
+  background-image: url(/rossdafareye.png);
+}
+
+.wakefield1 {
+  background-image: url(/wakefield1.png);
+}
+
+.wakefield2 {
+  background-image: url(/wakefield2.png);
+}
+
+.wakefield3 {
+  background-image: url(/wakefield3.png);
+}
+
+.wakefield4 {
+  background-image: url(/wakefield4.png);
+}
+
+.wakefield5 {
+  background-image: url(/wakefield5.png);
+}
+
+.wakefield6 {
+  background-image: url(/wakefield6.png);
+}
+
+.shady-grove {
+  background-image: url(/shady-grove.png);
+}
+
+.well-drinkers {
+  background-image: url(/well-drinkers.png);
+}
+
+.nobodys-darling {
+  background-image: url(/nobodys-darling.png);
+}
+
+.bear-creek {
+  background-image: url(/bear-creek.png);
+}
+
+.drew-matulich {
+  background-image: url(/drew-matulich.png);
+}
+
+.hollow-heart {
+  background-image: url(/hollow-heart.png);
+}
+
+.mojo-mountain {
+  background-image: url(/mojo-mountain.png);
+}
+
+.clouds-of-delusion {
+  background-image: url(/clouds-of-delusion.png);
+}
+
+.humphries-bazemore {
+  background-image: url(/humphries-bazemore.png);
+}
+
+.phaux-fish-west {
+  background-image: url(/phaux-fish-west.png);
+}
+
+.stolen-faces {
+  background-image: url(/stolen-faces.png);
+}
+
+.hoto-mozambique {
+  background-image: url(/hoto-mozambique.png);
+}
+
+.daze-between {
+  background-image: url(/daze-between.png);
+}
+
+.songs-from-the-road {
+  background-image: url(/songs-from-the-road.png);
+}
+
+.harrahs {
+  background-image: url(/harrahs.png);
+}
+
+.daycrawlers {
+  background-image: url(/daycrawlers.png);
+}
+
+.redbud-bald {
+  background-image: url(/redbud-bald.png);
+}
+
+.greenliners {
+  background-image: url(/greenliners.png);
+}
+
 .info-page {
   display: flex;
   flex-direction: column;
@@ -337,17 +525,11 @@ main {
   font-family: "Montserrat";
 }
 
-.menu {
-  font-size: 5vw;
-}
-
 .city {
-  margin: 25px 0px 0px 0px;
   font-family: "Baloo Paaji 2";
-  font-size: 15vw;
+  font-size: 12em;
   font-weight: 600;
-  color: hsl(266, 6%, 24%);
-  /* text-shadow: 0px 0px 4px hsl(246, 54%, 29%); */
+  color: hsl(265, 6%, 40%);
 
   animation-name: moveInLeft;
   animation-duration: 1s;
@@ -355,13 +537,12 @@ main {
 }
 
 .state {
-  margin: -270px 0px 25px 0px;
+  margin: -125px 0px 0px 0px;
   font-family: "Baloo Paaji 2";
   text-transform: lowercase;
-  font-size: 7vw;
-  font-weight: 500;
-  color: hsl(266, 6%, 24%);
-  /* text-shadow: 0px 0px 4px hsl(246, 54%, 29%); */
+  font-size: 5em;
+  font-weight: 100;
+  color: hsl(265, 6%, 40%);
 
   animation-name: moveInLeft;
   animation-duration: 1s;
@@ -370,10 +551,9 @@ main {
 
 .show-info {
   text-align: center;
-  font-size: 2vw;
+  font-size: 2em;
   font-weight: 300;
-  padding: 25px;
-  margin: -25px 0px 25px 0px;
+  padding: 100px 0px;
   animation: moveInRight 1s ease-out;
   color: hsl(266, 6%, 24%);
 }
@@ -399,19 +579,17 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   align-items: baseline;
-  gap: 112px;
+  gap: 125px;
   padding: 25px 0px 100px 0px;
   font-family: "Montserrat";
   font-size: 1em;
-  color: hsl(198, 94%, 28%);
-  margin: 0px 0px 0px 0px;
+  color: hsl(198, 93%, 36%);
 }
 
 .event-date {
-  font-size: 7vw;
+  font-size: 7em;
   font-weight: 200;
   letter-spacing: 4px;
-  padding: 15px;
   text-transform: uppercase;
   font-family: "Baloo Paaji 2";
   color: hsl(266, 6%, 24%);
@@ -439,13 +617,21 @@ main {
   font-size: 0.5em;
 }
 
+.band-extra-beloved {
+  font-size: 1em;
+}
+
 .os-band {
   font-size: 2em;
   font-weight: 450;
 }
 
 .os-os-band {
-  font-size: 1.35vw;
+  font-size: 1.9em;
+}
+
+.os-os-os-band {
+  font-size: 1.5em;
 }
 
 a {
@@ -455,34 +641,151 @@ a {
 
 .time-venue {
   padding: 10px 0px 0px 0px;
-  font-size: 1em;
+  font-size: 1.55em;
   color: hsl(266, 6%, 24%);
 }
 
 .os-tv {
-  font-size: 0.9em;
+  font-size: 1em;
 }
 
-@media screen and (min-width: 1024px) {
-  /* .heading-text {
-    margin: -25px 0px 0px 0px;
-  } */
+/* MEDIA QUERIES */
 
+@media screen and (min-width: 1285px) and (max-width: 1592px) {
   .tour-stops {
-    margin: 50px 0px 0px 0px;
+    justify-content: center;
   }
 }
 
-@media screen and (max-width: 600px) {
-  /* INDEX */
+@media screen and (min-width: 992px) and (max-width: 1285px) {
+  .dropdown {
+    margin: 10px;
+  }
+
+  .button-dropdown {
+    font-size: 2em;
+  }
+
+  .dropdown-content {
+    margin: 0px 0px 0px -55px;
+  }
+
   .heading-text {
-    flex-direction: column;
-    line-height: 2em;
+    padding: 50px 0px;
   }
 
   .heading-primary-main {
-    font-size: 35vw;
-    margin: -55px 0px 0px 0px;
+    font-size: 7em;
+  }
+
+  .heading-primary-sub {
+    font-size: 1.25em;
+  }
+
+  .tour-stops {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .event-date {
+    font-size: 6em;
+  }
+
+  .footer {
+    height: 750px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .dropdown {
+    left: 75%;
+    margin: 0;
+  }
+
+  .heading-text {
+    padding: 100px 0px 0px 0px;
+  }
+
+  .heading-primary-main {
+    font-size: 6em;
+  }
+
+  .heading-primary-sub {
+    font-size: 1.25em;
+  }
+
+  .tour-stops {
+    justify-content: center;
+    margin: 0;
+  }
+
+  .box {
+    width: 225px;
+    height: 225px;
+  }
+
+  .winter-tour,
+  .spring-tour {
+    font-size: 2em;
+  }
+
+  .button {
+    padding: 0px;
+  }
+
+  .location {
+    padding: 25px 0px 0px 0px;
+  }
+
+  .city {
+    font-size: 9em;
+  }
+
+  .state {
+    font-size: 5em;
+  }
+
+  .event-date {
+    font-size: 4em;
+  }
+
+  .time-venue {
+    font-size: 1em;
+  }
+
+  .os-os-band {
+    font-size: 1.9em;
+  }
+
+  .footer {
+    left: 43%;
+    font-size: 2em;
+    height: 750px;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .nav a {
+    left: 75%;
+  }
+
+  .dropdown {
+    left: 75%;
+    margin: 10px 0px;
+  }
+
+  .button-dropdown {
+    font-size: 1.5em;
+  }
+
+  .heading-text {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0px 75px 0px;
+  }
+
+  .heading-primary-main {
+    font-size: 5.5em;
   }
 
   .heading-primary-sub {
@@ -490,128 +793,263 @@ a {
   }
 
   .heading-primary-media {
+    display: block;
     font-family: "Montserrat";
     color: hsl(266, 6%, 24%);
-    font-size: 20px;
-    line-height: 1em;
-    display: block;
-    padding: 10px;
+    margin: -27px 0px -45px 0px;
+
     animation: moveInRight 1s ease-out;
   }
 
   .tour-stops {
-    gap: 20px;
-    margin: 125px 0px 0px 0px;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .box {
+    width: 250px;
+    height: 250px;
   }
 
   .winter-tour,
-  .spring-tour,
-  .summer-tour,
-  .fall-tour {
-    height: 150px;
-    margin: -45px 0px -45px 0px;
-    font-size: 15vw;
+  .spring-tour {
+    font-size: 2em;
   }
 
-  .hidden {
-    display: none;
-  }
-  .box {
-    border-radius: 8px;
+  .button {
+    padding: 0px;
   }
 
-  /* TOUR STOP - INFO PAGE*/
+  .location {
+    padding: 75px 0px 0px 0px;
+  }
 
   .city {
-    font-size: 23vw;
-    margin: -10px 0px 0px 0px;
-  }
-  .show-info {
-    font-size: 3.25vw;
-    font-weight: 300;
+    font-size: 8em;
   }
 
-  .dates,
-  .times {
-    font-size: 4vw;
+  .state {
+    font-size: 3em;
+    margin: -88px 0px 0px 0px;
+  }
+
+  .show-info {
+    font-size: 1.75em;
+  }
+
+  .venue a {
+    font-size: 1em;
   }
 
   .event-date {
-    font-size: 8vw;
-    letter-spacing: 2px;
-
-    padding: 0px 0px 15px 0px;
+    font-size: 2.5em;
+    padding: 15px;
   }
 
-  .event {
-    gap: 150px;
-  }
-
-  .individual-event {
-    border-radius: 8px;
-  }
-
-  .band {
-    font-size: 8vw;
-  }
-
-  .os-band {
-    font-size: 6vw;
+  .time-venue {
+    font-size: 1em;
   }
 
   .os-os-band {
-    font-size: 5vw;
+    font-size: 1.75em;
+  }
+
+  .footer {
+    left: 40%;
+    font-size: 2em;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 418px) and (max-width: 576px) {
+  .nav a {
+    left: 75%;
+  }
+
+  .dropdown {
+    left: 73%;
+    margin: 10px 0px 0px 0px;
+  }
+
+  .button-dropdown {
+    font-size: 1.25em;
+  }
+
+  .dropdown-content {
+    margin: 0px 0px 0px -80px;
+  }
+
+  .heading-text {
+    flex-direction: column;
+    padding: 50px 0px 50px 0px;
+  }
+
+  .heading-primary-main {
+    font-size: 4em;
+  }
+
+  .heading-primary-sub {
+    display: none;
+  }
+
+  .heading-primary-media {
+    display: block;
+    font-family: "Montserrat";
+    color: hsl(266, 6%, 24%);
+    font-size: 0.9em;
+    margin: -15px 0px 0px 0px;
+
+    animation: moveInRight 1s ease-out;
+  }
+
+  .tour-stops {
+    justify-content: center;
+  }
+
+  .winter-tour,
+  .spring-tour {
+    font-size: 3em;
+    margin: -160px 0px;
+  }
+
+  .location {
+    padding: 75px 0px 0px 0px;
+  }
+
+  .city {
+    font-size: 6em;
+  }
+
+  .state {
+    font-size: 2em;
+    margin: -60px 0px 0px 0px;
+  }
+
+  .show-info {
+    font-size: 1.75em;
+  }
+
+  .venue a {
+    font-size: 1em;
+  }
+
+  .times {
+    font-size: 0.85em;
+  }
+
+  .event-date {
+    font-size: 2.1em;
+    padding: 15px;
+  }
+
+  .time-venue {
+    font-size: 1em;
+  }
+
   .os-os-band {
-    font-size: 4.25vw;
+    font-size: 1.75em;
+  }
+
+  .footer {
+    left: 43%;
+    font-size: 1em;
   }
 }
 
-@media screen and (min-width: 714px) and (max-width: 1024px) {
+@media screen and (min-width: 312px) and (max-width: 418px) {
+  .nav a {
+    left: 65%;
+  }
+
+  .dropdown {
+    left: 73%;
+    margin: 10px 0px 0px 0px;
+  }
+
+  .button-dropdown {
+    font-size: 1.25em;
+  }
+
+  .dropdown-content {
+    margin: 0px 0px 0px -80px;
+  }
+  .heading-text {
+    flex-direction: column;
+    padding: 50px 0px 50px 0px;
+  }
+
+  .heading-primary-main {
+    font-size: 4em;
+  }
+
+  .heading-primary-sub {
+    display: none;
+  }
+
+  .heading-primary-media {
+    display: block;
+    font-family: "Montserrat";
+    color: hsl(266, 6%, 24%);
+    margin: -15px 0px 0px 0px;
+
+    animation: moveInRight 1s ease-out;
+  }
+
   .tour-stops {
-    margin: 112px -40px 0px -40px;
+    justify-content: center;
   }
-}
 
-@media screen and (min-width: 1400px) {
+  .winter-tour,
+  .spring-tour {
+    font-size: 3em;
+    margin: -160px 0px;
+  }
+
+  .location {
+    padding: 50px 0px 0px 0px;
+  }
+
+  .city {
+    font-size: 5.5em;
+  }
+
   .state {
-    margin: -150px 0px 25px 0px;
-  }
-}
-
-@media screen and (min-width: 1200px) and (max-width: 1399px) {
-  .state {
-    margin: -120px 0px 25px 0px;
-  }
-}
-
-@media screen and (min-width: 992px) and (max-width: 1199px) {
-  .state {
-    margin: -99px 0px 25px 0px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-  .state {
-    margin: -72px 0px 25px 0px;
-  }
-}
-
-@media screen and (min-width: 576px) and (max-width: 767px) {
-  .state {
-    margin: -50px 0px 25px 0px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .state {
-    margin: -50px 0px 25px 0px;
+    font-size: 2em;
+    margin: -60px 0px 0px 0px;
   }
 
-  .tour-stops {
-    margin: 0px 0px 0px 0px;
+  .show-info {
+    font-size: 1.75em;
+    padding: 50px 0px;
+  }
+
+  .venue a {
+    font-size: 0.9em;
+  }
+
+  .dates {
+    font-size: 0.75em;
+  }
+
+  .times {
+    font-size: 0.75em;
+  }
+
+  .event-date {
+    font-size: 2.25em;
+    letter-spacing: 0px;
+    padding: 15px 0px;
+  }
+
+  .time-venue {
+    font-size: 1em;
+  }
+
+  .os-os-band {
+    font-size: 1.75em;
+  }
+
+  .footer {
+    left: 43%;
+    font-size: 1em;
   }
 }
