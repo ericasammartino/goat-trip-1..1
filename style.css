@@ -227,7 +227,9 @@ body {
   position: absolute;
   padding: 50px 0px;
   left: 45%;
+}
 
+.email {
   font-family: "Montserrat";
   font-size: 3em;
 }
@@ -647,6 +649,15 @@ a {
 
 .os-tv {
   font-size: 1em;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+}
+
+.form {
+  font-size: 3em;
 }
 
 /* MEDIA QUERIES */
