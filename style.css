@@ -19,7 +19,7 @@ body {
   color: hsl(240, 5%, 4%);
 }
 
-.dropdown {
+/* .dropdown {
   position: absolute;
   padding: 3em;
   left: 85%;
@@ -79,7 +79,7 @@ body {
 
 .show {
   display: block;
-}
+} */
 
 /* HEADING */
 
@@ -595,6 +595,15 @@ body {
   text-transform: uppercase;
   font-family: "Baloo Paaji 2";
   color: hsl(266, 6%, 24%);
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: hsl(30, 80%, 96%);
+  width: 100%;
+  margin: 15px 0px;
+  z-index: 999;
 }
 
 .individual-event {
